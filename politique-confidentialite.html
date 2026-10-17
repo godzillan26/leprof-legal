@@ -58,7 +58,9 @@
 <p>Ces données sont nécessaires pour créer ton compte et personnaliser ton expérience.</p>
 <div class="tablewrap"><table>
 <tr><th>Donnée</th><th>Caractère</th><th>Finalité</th></tr>
-<tr><td>Numéro de téléphone</td><td>Obligatoire</td><td>Authentification, paiement, contact support</td></tr>
+<tr><td>Adresse e-mail (via la connexion Google)</td><td>Obligatoire</td><td>Authentification (connexion avec Google), identification du compte, contact</td></tr>
+<tr><td>Nom et identifiant de ton compte Google</td><td>Obligatoire</td><td>Création et sécurisation de ton compte</td></tr>
+<tr><td>Numéro de téléphone</td><td>Optionnel</td><td>Connexion alternative par SMS, paiement, contact support</td></tr>
 <tr><td>Prénom ou surnom</td><td>Obligatoire</td><td>Affichage dans l'application, classement</td></tr>
 <tr><td>Pays</td><td>Obligatoire</td><td>Adaptation du contenu et des tarifs locaux</td></tr>
 <tr><td>Niveau scolaire (BFEM, BAC, série)</td><td>Obligatoire</td><td>Adaptation du contenu pédagogique</td></tr>
@@ -170,8 +172,8 @@
 <div class="tablewrap"><table>
 <tr><th>Sous-traitant</th><th>Fonction</th><th>Localisation</th><th>Données traitées</th></tr>
 <tr><td><strong>Supabase</strong></td><td>Hébergement base de données et stockage</td><td>Irlande (UE)</td><td>Toutes les données utilisateur</td></tr>
-<tr><td><strong>Termii</strong></td><td>Envoi des codes OTP par SMS</td><td>Nigeria</td><td>Numéro de téléphone + code OTP temporaire</td></tr>
-<tr><td><strong>Anthropic</strong></td><td>Intelligence artificielle (génération du bulletin parental, recommandations personnalisées)</td><td>USA</td><td>Statistiques anonymisées de progression</td></tr>
+<tr><td><strong>Google (connexion Google / Google Sign-In)</strong></td><td>Authentification sécurisée (méthode de connexion principale)</td><td>USA</td><td>Adresse e-mail, nom et identifiant du compte Google</td></tr>
+<tr><td><strong>Sendtext / Infobip</strong></td><td>Envoi des codes de connexion par SMS (méthode de connexion alternative)</td><td>Sénégal / UE</td><td>Numéro de téléphone + code temporaire</td></tr>
 <tr><td><strong>DeepSeek</strong></td><td>Intelligence artificielle (traitement automatique des épreuves d'examens)</td><td>Chine</td><td><strong>Aucune donnée personnelle</strong> — uniquement du contenu pédagogique public (épreuves des ministères de l'éducation)</td></tr>
 <tr><td><strong>Google (Gemini)</strong></td><td>Intelligence artificielle (validation automatisée de la qualité des QCM)</td><td>USA</td><td><strong>Aucune donnée personnelle</strong> — uniquement du contenu pédagogique (questions de quiz et leurs corrigés)</td></tr>
 <tr><td><strong>Wave</strong></td><td>Traitement des paiements</td><td>Sénégal</td><td>Numéro payeur, montant, référence de transaction</td></tr>
@@ -230,7 +232,7 @@
 <h3>9.1 Chiffrement</h3>
 <ul>
 <li>Toutes les communications entre ton appareil et nos serveurs sont chiffrées via <strong>HTTPS/TLS</strong></li>
-<li>Les mots de passe ne sont jamais utilisés : nous utilisons un système de code OTP par SMS, plus sûr</li>
+<li>Les mots de passe ne sont jamais utilisés : la connexion se fait via <strong>Google (Google Sign-In)</strong>, avec une option de connexion par code SMS — des méthodes plus sûres qu'un mot de passe</li>
 <li>Les données sensibles sont chiffrées au repos sur les serveurs Supabase</li>
 </ul>
 <h3>9.2 Contrôle d'accès</h3>
