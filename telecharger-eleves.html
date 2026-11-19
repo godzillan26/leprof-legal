@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LeProf — Révise et réussis le BFEM et le BAC</title>
-<meta name="description" content="LeProf : l'application de révision pour réussir le BFEM et le BAC. Quiz en Maths, Physique-Chimie et SVT, du collège à la terminale. À installer gratuitement sur Google Play.">
+<title>LeProf — Révise et réussis le BFEM, le BEPC et le BAC</title>
+<meta name="description" content="LeProf : l'application de révision pour réussir le BFEM, le BEPC et le BAC. Quiz en Maths, Physique-Chimie et SVT, du collège à la terminale. À installer gratuitement sur Android et sur iPhone.">
 <meta property="og:title" content="LeProf — Révise et réussis">
 <meta property="og:description" content="Quiz en Maths, Physique-Chimie et SVT, du collège à la terminale. Gratuit sur Google Play.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,11 +49,13 @@
   .btn{
     display:inline-flex;align-items:center;justify-content:center;gap:12px;
     background:var(--orange);color:#fff;text-decoration:none;font-weight:800;font-size:19px;
-    padding:18px 34px;border-radius:16px;box-shadow:0 12px 26px rgba(249,115,22,.35);
+    padding:18px 34px;min-width:270px;border-radius:16px;box-shadow:0 12px 26px rgba(249,115,22,.35);
     transition:transform .08s ease;
   }
   .btn:active{transform:scale(.98)}
   .btn svg{width:22px;height:22px;flex:none}
+  .btns{display:flex;flex-direction:column;align-items:center;gap:12px}
+  .btn-sec{background:var(--bleu);box-shadow:0 12px 26px rgba(30,64,175,.30)}
   .cta .free{margin-top:14px;color:var(--gris);font-weight:600;font-size:14.5px}
 
   .feats{max-width:560px;margin:14px auto 0;padding:24px 22px 10px;display:grid;gap:14px}
@@ -82,15 +84,21 @@
   </section>
 
   <section class="cta">
-    <a class="btn" href="https://play.google.com/store/apps/details?id=sn.leprof.mobile&amp;referrer=utm_source%3Dfacebook%26utm_medium%3Dcpc%26utm_campaign%3Deleves_15_22" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.1c-.3.2-.5.6-.5 1.1v17.6c0 .5.2.9.5 1.1l9.3-9.9L3.6 2.1zm10.9 7.6L5.9 1.4l10.8 6.2-2.2 2.1zm3.6 2.3 2.7 1.5c.8.5.8 1.5 0 2l-2.7 1.5-2.5-2.5 2.5-2.5zm-3.6 2.3 2.2 2.1-10.8 6.2 8.6-8.3z"/></svg>
-      Installer sur Google Play
-    </a>
-    <p class="free">100% gratuit &middot; application Android</p>
+    <div class="btns">
+      <a class="btn" href="https://play.google.com/store/apps/details?id=sn.leprof.mobile&amp;referrer=utm_source%3Dfacebook%26utm_medium%3Dcpc%26utm_campaign%3Deleves_15_22" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.1c-.3.2-.5.6-.5 1.1v17.6c0 .5.2.9.5 1.1l9.3-9.9L3.6 2.1zm10.9 7.6L5.9 1.4l10.8 6.2-2.2 2.1zm3.6 2.3 2.7 1.5c.8.5.8 1.5 0 2l-2.7 1.5-2.5-2.5 2.5-2.5zm-3.6 2.3 2.2 2.1-10.8 6.2 8.6-8.3z"/></svg>
+        Installer sur Android
+      </a>
+      <a class="btn btn-sec" href="https://apps.apple.com/app/id6833065998" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><line x1="10" y1="18.5" x2="14" y2="18.5"/></svg>
+        Installer sur iPhone
+      </a>
+    </div>
+    <p class="free">100% gratuit &middot; Android et iPhone</p>
   </section>
 
   <section class="feats">
-    <div class="feat"><div class="ic">✅</div><div><b>Des quiz par matière</b><span>Maths, Physique-Chimie et SVT, alignés sur le programme sénégalais.</span></div></div>
+    <div class="feat"><div class="ic">✅</div><div><b>Des quiz par matière</b><span>Maths, Physique-Chimie et SVT, alignés sur le programme officiel.</span></div></div>
     <div class="feat"><div class="ic">📈</div><div><b>Un niveau qui progresse</b><span>Tu montes de niveau à chaque exercice réussi.</span></div></div>
     <div class="feat"><div class="ic">🤝</div><div><b>L'entraide entre camarades</b><span>Pose une question, aide les autres, révise en groupe.</span></div></div>
   </section>
